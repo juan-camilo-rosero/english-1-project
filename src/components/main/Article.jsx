@@ -19,24 +19,27 @@ function Article({ article }) {
           <h2 className="italic text-3xl text-center md:text-6xl md:w-[35vw] md:text-left">
             {article.title}
           </h2>
-          <div className="hidden md:flex h-[25vh] w-[25vh] border-2 border-black rounded-full p-8">
-            <img src="arrow_icon.png" alt="Scroll down" />
+          <div className="hidden md:flex h-[25vh] w-[25vh] border-2 border-black rounded-full p-8 justify-center items-center">
+            <img src="arrow_icon.png" alt="Scroll down" className="h-3/4"/>
           </div>
         </div>
         <Information unit={article.unit} />
 
         {article.type == "text" && (
           <div className="w-full md:flex md:justify-between md:px-16 mt-12 md:mt-24">
-            <h3 className="text-5xl italic hidden md:flex">Review:</h3>
-            <p className="text-lg text-justify md:text-2xl md:w-2/3">
-              {article.content}
-            </p>
+            <h3 className="text-5xl italic hidden md:flex">{article.subtitle}:</h3>
+            <div className="text-lg text-justify md:text-2xl md:w-2/3">
+              {article.content.split("\n").map((line, index) => (
+                <p key={index} className="mb-6">{line}</p>
+              ))}
+            </div>
           </div>
         )}
+
         <div className="md:w-full md:flex md:justify-end md:px-16 md:mt-8">
           <a
             href={article.next}
-            className="w-full block text-center md:w-auto md:px-16 md:py-3 md:mt-4 md:flex text-primary py-4 font-medium text-xl mt-8 bg-secondary"
+            className="w-full block text-center md:w-auto md:px-16 md:py-3 md:mt-4 md:flex text-primary py-4 font-medium text-xl mt-2 bg-secondary"
           >
             Next article
           </a>
