@@ -9,7 +9,7 @@ const bitter = Bitter({
 });
 
 export const metadata = {
-  title: "English Project",
+  title: "Red Velvet",
   description: "Hi, I'm the English Project :3",
 };
 
