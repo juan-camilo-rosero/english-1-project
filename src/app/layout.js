@@ -8,6 +8,12 @@ const bitter = Bitter({
   style: ["normal", "italic"],
 });
 
+const greatVibes = GreatVibes({
+  variable: "--font-great-vibes",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export const metadata = {
   title: "Red Velvet",
   description: "Hi, I'm the English Project :3",
