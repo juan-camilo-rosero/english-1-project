@@ -12,6 +12,7 @@ const greatVibes = GreatVibes({
   variable: "--font-great-vibes",
   subsets: ["latin"],
   weight: ["400"],
+  style: ["normal"],
 });
 
 export const metadata = {
